@@ -11,21 +11,26 @@
   /* text-transform: capitalize; */
   transition: all 0.2s linear;
 }
+
 p{
   line-height: 23px;
 }
+
 html {
   font-size: 55%;
   overflow-x: hidden;
   scroll-behavior: smooth;
   scroll-padding-top: 7rem;
 }
+
 html::-webkit-scrollbar {
   width: 0.1rem;
 }
+
 html::-webkit-scrollbar-track {
   background: #aaa;
 }
+
 html::-webkit-scrollbar-thumb {
   background: #29d9d5;
 }
@@ -55,6 +60,7 @@ body {
   cursor: pointer;
   background: none;
 }
+
 .btn-group .btn:hover {
   background: #eddc75;
   color: black;
@@ -104,6 +110,7 @@ nav .active{
   margin-top: 15px;
   margin-left: -15px;
 }
+
 .logo {
   font-size: 2.5rem;
   color: #29d9d5;
@@ -119,6 +126,23 @@ nav .active{
   border-bottom: 0.1rem solid var(--main-color);
   /* padding-bottom: 0.5rem; */
 }
+
+/* mobile nav */
+
+.mob-nav {
+  display: none;
+}
+
+.menu-btn i {
+  font-size: 25px;
+  display: none;
+}
+
+#click {
+  display: none;
+}
+
+
 
 .details{
   background-color: #111;
@@ -451,4 +475,73 @@ ul {
     width: 33.30%;
     margin-bottom: 10%;
   }
+}
+
+
+
+/* Hamburger */
+
+@media (max-width: 460px) {
+
+  .main-nav {
+    display: none;
+  }
+
+  #click:checked~.menu-btn i:before {
+    content: "\f00d";
+  }
+
+
+  .mob-nav {
+    position: fixed;
+    top: 50px;
+    left: -100%;
+    background-color: #111;
+    height: 55vh;
+    width: 100%;
+    text-align: center;
+    display: block;
+    transition: all 0.3s ease-in-out;
+  }
+
+
+  .menu-btn i {
+    font-size: 25px;
+    display: block;
+    float: right;
+    margin-top: -38px;
+    margin-right: 18px;
+    color: #fff;
+  }
+
+  .mob-nav li:nth-child(1) {
+    margin-top: 10px;
+  }
+
+  .mob-nav li {
+    margin-bottom: 20px;
+  }
+
+  .btn {
+    margin-top: 0.5rem;
+    display: inline-block;
+    padding: 0.5rem 2.5rem;
+    font-size: 1.5rem;
+    color: #fffefe;
+    border: 0.15rem solid darkslategrey;
+    border-radius: 2rem;
+    cursor: pointer;
+    background: none;
+  }
+
+  .btn-group {
+    margin-right: 55px;
+  }
+
+
+  #click:checked~ul {
+    left: 0;
+  }
+
+
 }

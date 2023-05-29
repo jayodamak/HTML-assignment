@@ -117,12 +117,29 @@ nav .active {
   /* padding-bottom: 0.5rem; */
 }
 
+
+/* mobile nav */
+
+.mob-nav {
+  display: none;
+}
+
+.menu-btn i {
+  font-size: 25px;
+  display: none;
+}
+
+#click {
+  display: none;
+}
+
 .details {
   background-color: #111;
   background-image: url(images/kosgoda.jpg);
   /* background-repeat: no-repeat; */
   background-attachment: fixed;
   background-size: cover;
+  background-position: center;
 }
 
 /* HOME */
@@ -1512,3 +1529,74 @@ ul {
     margin-bottom: 10%;
   }
 } 
+
+
+
+
+
+/* Hamburger */
+
+@media (max-width: 460px) {
+
+  .main-nav {
+    display: none;
+  }
+
+  #click:checked~.menu-btn i:before {
+    content: "\f00d";
+  }
+
+
+  .mob-nav {
+    position: fixed;
+    top: 50px;
+    left: -100%;
+    background-color: #111;
+    height: 55vh;
+    width: 100%;
+    text-align: center;
+    display: block;
+    transition: all 0.3s ease-in-out;
+  }
+
+
+  .menu-btn i {
+    font-size: 25px;
+    display: block;
+    float: right;
+    margin-top: -38px;
+    margin-right: 18px;
+    color: #fff;
+  }
+
+  .mob-nav li:nth-child(1) {
+    margin-top: 10px;
+  }
+
+  .mob-nav li {
+    margin-bottom: 20px;
+  }
+
+  .btn {
+    margin-top: 0.5rem;
+    display: inline-block;
+    padding: 0.5rem 2.5rem;
+    font-size: 1.5rem;
+    color: #fffefe;
+    border: 0.15rem solid darkslategrey;
+    border-radius: 2rem;
+    cursor: pointer;
+    background: none;
+  }
+
+  .btn-group {
+    margin-right: 55px;
+  }
+
+
+  #click:checked~ul {
+    left: 0;
+  }
+
+
+}

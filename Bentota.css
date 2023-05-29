@@ -11,21 +11,26 @@
   /* text-transform: capitalize; */
   transition: all 0.2s linear;
 }
-p{
+
+p {
   line-height: 23px;
 }
+
 html {
   font-size: 55%;
   overflow-x: hidden;
   scroll-behavior: smooth;
   scroll-padding-top: 7rem;
 }
+
 html::-webkit-scrollbar {
   width: 0.1rem;
 }
+
 html::-webkit-scrollbar-track {
   background: #aaa;
 }
+
 html::-webkit-scrollbar-thumb {
   background: #29d9d5;
 }
@@ -55,6 +60,7 @@ body {
   cursor: pointer;
   background: none;
 }
+
 .btn-group .btn:hover {
   background: #eddc75;
   color: black;
@@ -85,11 +91,11 @@ body {
   color: #eddc75;
 }
 
-nav .active{
- color: #29d9d5;
+nav .active {
+  color: #29d9d5;
 }
 
-.links-hidden .menu-btn{
+.links-hidden .menu-btn {
   color: #eddc75;
 }
 
@@ -104,6 +110,7 @@ nav .active{
   margin-top: 15px;
   margin-left: -15px;
 }
+
 .logo {
   font-size: 2.5rem;
   color: #29d9d5;
@@ -114,18 +121,33 @@ nav .active{
   height: 6rem;
 }
 
+/* mobile nav */
+
+.mob-nav {
+  display: none;
+}
+
+.menu-btn i {
+  font-size: 25px;
+  display: none;
+}
+
+#click {
+  display: none;
+}
+
 .header .navbar a:hover {
   color: var(--main-color);
   border-bottom: 0.1rem solid var(--main-color);
   /* padding-bottom: 0.5rem; */
 }
 
-.details{
+.details {
   background-color: #111;
   background-image: url(images/kosgoda.jpg);
   /* background-repeat: no-repeat; */
   background-attachment: fixed;
-  background-size: cover ;
+  background-size: cover;
 }
 
 
@@ -136,7 +158,7 @@ nav .active{
   font-size: 55px;
   text-align: center;
   padding-bottom: 40px;
-  font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif
 }
 
 .bg-image .details h2 {
@@ -144,42 +166,42 @@ nav .active{
   letter-spacing: 5px;
   font-size: 50px;
   text-align: center;
-  padding-bottom:15%;
+  padding-bottom: 15%;
   font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
 
-  
- 
 
-  .intro{
-    color: white;
+
+
+.intro {
+  color: white;
   font-size: 17px;
   padding: 2% 5%;
-  }
-
-  .bg-image .intro img{
-    max-width: 500px;
-    float: left;
-    border-radius: 10px;
-    margin-right: 50px;
-    margin-bottom: 20px;
-  }
-
-  .bg-image .intro .image{
-    text-align: right;
-  }
-
-  .map{
-    text-align: center;
 }
 
-.map iframe{
-    width: 100%;
+.bg-image .intro img {
+  max-width: 500px;
+  float: left;
+  border-radius: 10px;
+  margin-right: 50px;
+  margin-bottom: 20px;
 }
-  
-  
 
-  
+.bg-image .intro .image {
+  text-align: right;
+}
+
+.map {
+  text-align: center;
+}
+
+.map iframe {
+  width: 100%;
+}
+
+
+
+
 
 
 
@@ -190,23 +212,28 @@ nav .active{
   background-color: #3e3d39;
   margin: auto;
 }
+
 .row {
   display: flex;
   flex-wrap: wrap;
 }
+
 ul {
   list-style: none;
 }
+
 .footer {
   background-color: #3e3d39;
   padding: 40px 0;
   margin-top: auto;
   opacity: 0.9;
 }
+
 .footer-col {
   width: 25%;
   padding: 0 30px;
 }
+
 .footer-col h4 {
   font-size: 18px;
   color: aliceblue;
@@ -215,6 +242,7 @@ ul {
   font-weight: 500;
   position: relative;
 }
+
 .footer-col h4::before {
   content: "";
   position: absolute;
@@ -225,9 +253,11 @@ ul {
   box-sizing: border-box;
   width: 50px;
 }
+
 .footer-col ul li:not(:last-child) {
   margin-bottom: 16px;
 }
+
 .footer-col ul li a {
   font-size: 16px;
   text-transform: capitalize;
@@ -238,10 +268,12 @@ ul {
   display: block;
   transform: all 0.3s ease;
 }
+
 .footer-col ul li a:hover {
   color: #eddc75;
   padding-left: 8px;
 }
+
 .footer-col .social-links a {
   display: inline-block;
   height: 40px;
@@ -255,6 +287,7 @@ ul {
   transition: all 0.5s ease;
   font-size: 20px;
 }
+
 .footer-col .social-links a:hover {
   color: #24262b;
   background-color: #eddc75;
@@ -264,22 +297,22 @@ ul {
   padding: 4rem 100%;
 }
 
-.bottom{
+.bottom {
   background-color: #3e3d39;
   width: 100vw;
   padding: 1% 0;
   text-align: center;
 }
 
-.bottom p{
+.bottom p {
   font-size: 15px;
   word-spacing: 2px;
   text-transform: capitalize;
-  color: white;  
+  color: white;
   margin-top: 5%;
 }
 
-.bottom span{
+.bottom span {
   text-transform: uppercase;
   opacity: .4;
   font-weight: 200;
@@ -295,10 +328,11 @@ ul {
   position: relative;
   display: inline-block;
 }
+
 .menu-content {
   display: none;
   position: absolute;
-  background-color:#3e3d39;
+  background-color: #3e3d39;
   border-radius: 15px;
   min-width: 120px;
   width: auto;
@@ -308,6 +342,7 @@ ul {
   padding-left: 12%;
 
 }
+
 .dropdown-menu:hover .menu-content {
   display: block;
 }
@@ -327,14 +362,17 @@ ul {
   html {
     font-size: 55%;
   }
+
   .header {
     padding: 1.5rem 2rem;
   }
 }
+
 @media (max-width: 768px) {
   #menu-btn {
     display: inline-block;
   }
+
   .header.navbar {
     position: absolute;
     top: 90%;
@@ -343,6 +381,7 @@ ul {
     background: #222;
     clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
   }
+
   .header.navbar.a {
     margin: 2rem;
     font-size: 2rem;
@@ -382,18 +421,21 @@ ul {
   .bg-image .details h2 {
     font-size: 2rem;
   }
+
   .bg-image .intro p {
     font-size: 1.75rem;
   }
-  .bg-image .image img{
+
+  .bg-image .image img {
     width: 100%;
     float: none;
   }
 
-   /* Footer */
-   .bottom p {
+  /* Footer */
+  .bottom p {
     font-size: 10px;
   }
+
   .footer .footer-col {
     width: 33.30%;
     margin-bottom: 10%;
@@ -415,14 +457,80 @@ ul {
     font-size: 3rem;
   }
 
-   /* Footer */
-   .bottom p {
+  /* Footer */
+  .bottom p {
     font-size: 15px;
   }
+
   .footer .footer-col {
     width: 33.30%;
     margin-bottom: 10%;
   }
 }
 
+/* Hamburger */
 
+@media (max-width: 460px) {
+
+  .main-nav {
+    display: none;
+  }
+
+  #click:checked~.menu-btn i:before {
+    content: "\f00d";
+  }
+
+
+  .mob-nav {
+    position: fixed;
+    top: 50px;
+    left: -100%;
+    background-color: #111;
+    height: 55vh;
+    width: 100%;
+    text-align: center;
+    display: block;
+    transition: all 0.3s ease-in-out;
+  }
+
+
+  .menu-btn i {
+    font-size: 25px;
+    display: block;
+    float: right;
+    margin-top: -38px;
+    margin-right: 18px;
+    color: #fff;
+  }
+
+  .mob-nav li:nth-child(1) {
+    margin-top: 10px;
+  }
+
+  .mob-nav li {
+    margin-bottom: 20px;
+  }
+
+  .btn {
+    margin-top: 0.5rem;
+    display: inline-block;
+    padding: 0.5rem 2.5rem;
+    font-size: 1.5rem;
+    color: #fffefe;
+    border: 0.15rem solid darkslategrey;
+    border-radius: 2rem;
+    cursor: pointer;
+    background: none;
+  }
+
+  .btn-group {
+    margin-right: 55px;
+  }
+
+
+  #click:checked~ul {
+    left: 0;
+  }
+
+
+}
