@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="Tickets.css" />
+    <link rel="stylesheet" type="text/css"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" />
+    <link rel="stylesheet" href="international-telephone-input.css">
+    <!-- <link rel="stylesheet" href="build/css/intlTelInput.css"> -->
+    <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/css/intlTelInput.css" />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/js/intlTelInput.min.js"></script>
+    <title>Details</title>
+
+</head>
+
+
+<body onload="pageOnload()">
+    <div class="bg-image-home">
+        <!-- Navigation bar -->
+        <header class="header">
+            <a href="./Home.html" class="logo">TurtleTales</a>
+            <div>
+                <nav class="navbar">
+                    <a href="./Home.html">Home</a>
+                    <a href="./Blogs.html">Blogs</a>
+                    <a href="./Categories.html">Turtle Categories</a>
+                    <div class="dropdown-menu">
+                        <a href="#turtle hatcheries" class="menu-btn">Turtle hatcheries</a>
+                        <div class="menu-content">
+                            <ul>
+                                <li><a class="links-hidden" href="./Hikkaduwa.html">Hikkaduwa</a></li>
+                                <li><a class="links-hidden" href="./Kosgoda.html">Kosgoda</a></li>
+                                <li><a class="links-hidden" href="./Bentota.html">Bentota</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <a href="./Threats.html">Threats To Turtles</a>
+
+                </nav>
+            </div>
+            <div class="btn-group">
+                <a href="Donate.html" class="btn">Donate</a>
+                <a href="#purchase" class="btn">Purchase</a>
+            </div>
+        </header>
+
+
+        <div class="tickets">
+            <div class="all">
+                <div class="heading">
+                    <div class="det-tickets">
+                        <p>Buy Tickets</p><br><br>
+                    </div>
+                </div>
+
+
+                <form id="bokingForm" action="./Payment.html">
+                    <h class="guest-text">Enter your details</h><br><br><br>
+
+                    <div class="form-item">
+                        <label for="first-name">Full Name:</label>
+                        <input type="text" id="firsName" class="validateable" name="firstName" required onkeyup="validateUserNameInput()">
+                        <div class="validation-message">Invalid Name.Please add the full name.</div>
+                    </div>
+                    <div class="form-item">
+                        <label for="mobile">Mobile:</label>
+                        <div class="iti">
+                            <input type="tel" name="phone" id="phone" placeholder="12345678" pattern="[0-9]{10}" required>
+                        </div>
+                    </div>
+                    <div class="form-item">
+                        <label for="email">Email Address:</label>
+                        <input type="email" id="email" name="email" class="validateable" required onkeyup="validateEmail()">
+                        <div class="validation-message">Invalid Email.</div>
+                    </div>
+                    <div class="form-item">
+                        <label for="email">Confirm Email:</label>
+                        <input type="email" id="confirm-email" name="email" class="validateable" required onkeyup="confirmEmail()">
+                        <div class="validation-message">emails are not matching.</div>
+                    </div>
+                    <div class="form-item">
+                        <label for="gender">Gender:</label>
+                        <select id="gender" name="gender" required >
+                            <option value="" disabled selected hidden>Select Gender</option>
+                            <option value="male">Male</option>
+                            <option value="female">Female</option>
+                            <option value="other">Other</option>
+                        </select>
+                    </div>
+
+                    <div id="subButton" class="Submit-button">
+                        <button onclick="onDetailSubmit()">Continue with purchase</button>
+                    </div>
+
+                </form>
+
+
+
+
+
+                <!-- Summary table -->
+                <div class="sticky-summary">
+                    <div class="sum-tab">
+                        <br><br>
+                        <h2>Summary Of Your Order</h2>
+                        <div id="summaryTable" class="summary-table">
+                            <table>
+                                <tr>
+                                    <td>Date</td>
+                                    <td id="date"></td>
+                                </tr>
+                                <tr>
+                                    <td>Time</td>
+                                    <td id="time"></td>
+                                </tr>
+                                <tr>
+                                    <td>Duration</td>
+                                    <td id="duration"></td>
+                                </tr>
+                                <tr>
+                                    <td>Tickets</td>
+                                    <td>Charges</td>
+                                </tr>
+                                <tr id="sl-adult-row">
+                                    <td id="slAdultTickets">SL Adult</td>
+                                    <td id="slAdultCharge"></td>
+                                </tr>
+                                <tr id="sl-child-row">
+                                    <td id="slChildTickets">SL Child</td>
+                                    <td id="slChildCharge"></td>
+                                </tr>
+                                <tr id="foreign-adult-row">
+                                    <td id="foreignerAdultTickets">Foreigner Adult</td>
+                                    <td id="foreignerAdultCharge"></td>
+                                </tr>
+                                <tr id="foreign-child-row">
+                                    <td id="foreignerChildTickets">Foreigner Child</td>
+                                    <td id="foreignerChildCharge"></td>
+                                </tr>
+                                <tr id="Infant-row" >
+                                    <td id="infantTickets">Infant</td>
+                                    <td>Free</td>
+                                </tr>
+                                <tr>
+                                    <td>Total Payable</td>
+                                    <td id="totalPayable"></td>
+                                </tr>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+
+
+
+            </div>
+
+            
+
+           
+
+        </div>
+        <footer class="footer">
+            <div class="container-home">
+                <div class="row">
+                    <div class="footer-col">
+                        <h4>Featured Links</h4>
+                        <ul>
+                            <li><a href="#">About Us</a></li>
+                            <li><a href="#">Terms & Conditions</a></li>
+                            <li><a href="#">Privacy Policy</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-col">
+                        <h4>Get Help</h4>
+                        <ul>
+                            <li><a href="#">F.A.Q</a></li>
+                            <li><a href="#">Contact Us</a></li>
+                            <li><a href="#">Sri Lanka Map</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-col">
+                        <h4>Follow Us</h4>
+                        <div class="social-links">
+                            <a href="#"><i class="fab fa-facebook-f"></i></a></i></a>
+                            <a href="#"><i class="fab fa-twitter"></i></a></i></a>
+                            <a href="#"><i class="fab fa-instagram"></i></a></i></a>
+                            <a href="#"><i class="fab fa-linkedin-in"></i></a></i></a>
+                        </div>
+                        <!-- <div class="space"></div> -->
+                    </div>
+                </div>
+            </div>
+            <div class="bottom">
+                <p>copyright &copy;2023 TurtleTales.Designed by <span>Jayoda Makawita</span></p>
+            </div>
+        </footer>
+    </div>
+
+
+</body>
+<script src="Tickets.js"></script>
+<!-- <script src="international-telephone-input.js"></script> -->
+<script>
+    const phoneInputField = document.querySelector("#phone");
+    const phoneInput = window.intlTelInput(phoneInputField, {
+    //   utilsScript:
+    //     "https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/js/utils.js",
+    });
+  </script>
+<!-- <script>
+    const phoneInputField = document.querySelector("#phone");
+    const phoneInput = window.intlTelInput(phoneInputField, {
+        utilsScript:
+            "https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/js/utils.js",
+    });
+</script> -->
+</html>

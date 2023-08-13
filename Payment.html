@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="Tickets.css" />
+    <!-- <link rel="stylesheet" type="text/css"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" /> -->
+    <title>Payment</title>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.2/css/all.css">
+</head>
+
+
+<body  onload="pageOnload()">
+    <div class="bg-image-home">
+        <!-- Navigation bar -->
+        <header class="header">
+            <a href="./Home.html" class="logo">TurtleTales</a>
+            <div>
+                <nav class="navbar">
+                    <a href="./Home.html">Home</a>
+                    <a href="./Blogs.html">Blogs</a>
+                    <a href="./Categories.html">Turtle Categories</a>
+                    <div class="dropdown-menu">
+                        <a href="#turtle hatcheries" class="menu-btn">Turtle hatcheries</a>
+                        <div class="menu-content">
+                            <ul>
+                                <li><a class="links-hidden" href="./Hikkaduwa.html">Hikkaduwa</a></li>
+                                <li><a class="links-hidden" href="./Kosgoda.html">Kosgoda</a></li>
+                                <li><a class="links-hidden" href="./Bentota.html">Bentota</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <a href="./Threats.html">Threats To Turtles</a>
+
+                </nav>
+            </div>
+            <div class="btn-group">
+                <a href="Donate.html" class="btn">Donate</a>
+                <a href="#purchase" class="btn">Purchase</a>
+            </div>
+        </header>
+
+
+        <div class="tickets">
+            <div class="all">
+                <div class="heading">
+                    <div class="det-tickets">
+                        <p>Buy Tickets</p><br><br>
+                        <!-- <a href="#Dates">Dates </a> &nbsp &nbsp
+            <p1>| </p1>&nbsp &nbsp &nbsp
+            <a href="#Duration">Duration</a> &nbsp &nbsp
+            <p1>| </p1>&nbsp &nbsp &nbsp
+            <a href="#Guests">Guests </a> &nbsp &nbsp -->
+                    </div>
+                </div>
+
+
+                <div class="payment-wrapper">
+                    <div class="payment">
+                        <div class="payment-logo">
+                            <p>p</p>
+                        </div>
+
+
+                        <h2>Payment Gateway</h2>
+                        <div class="payment-form">
+                            <div class="card space icon-relative">
+                                <label class="payment-label">Card holder:</label>
+                                <input type="text" class="payment-input" placeholder="Card holder">
+                                <i class="fas fa-user"></i>
+                            </div>
+                            <div class="card space icon-relative">
+                                <i class="far fa-credit-card"></i>
+                                <label class="payment-label">Card number:</label>
+                                <input type="text"  id="cc-input" class="payment-input" data-mask="0000-0000-0000-0000" pattern="[0-9][0-9][0-9][0-9]{4}-[0-9][0-9][0-9][0-9]{4}-[0-9][0-9][0-9][0-9]{4}-[0-9][0-9][0-9][0-9]{4}" placeholder="Card Number" onkeyup="formatCardNumber()" maxlength="19">
+                                <div class="validation-message">Invalid Card Number.</div>
+                            </div>
+                            <div class="card-grp space">
+                                <div class="card-item icon-relative">
+                                    <label class="payment-label">Expiry date:</label>
+                                    <input type="text" id="expiry-date" name="expiry-data"  class="payment-input" placeholder="00 / 00" onkeyup="validateExpiryDate()" 📏="4">
+                                    <div class="validation-message">Invalid Expiry Date.</div>
+                                    <i class="far fa-calendar-alt"></i>
+                                </div>
+                                <div class="card-item icon-relative">
+                                    <label class="payment-label">CVC:</label>
+                                    <input type="text" class="payment-input" data-mask="000" placeholder="000" pattern="[0-9]"  maxlength="3" minlength="3">
+                                    <i class="fas fa-lock"></i>
+                                </div>
+                            </div>
+
+                            <div class="pay-btn" >
+                                <a href="Confirmation.html" id="pay-btn">Pay</a>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+
+                <!-- Summary table -->
+                <div class="sticky-summary">
+                    <div class="sum-tab">
+                        <br><br>
+                        <h2>Summary Of Your Order</h2>
+                        <div id="summaryTable" class="summary-table">
+                            <table>
+                                <tr>
+                                    <td>Date</td>
+                                    <td id="date"></td>
+                                </tr>
+                                <tr>
+                                    <td>Time</td>
+                                    <td id="time"></td>
+                                </tr>
+                                <tr>
+                                    <td>Duration</td>
+                                    <td id="duration"></td>
+                                </tr>
+                                <tr>
+                                    <td>Tickets</td>
+                                    <td>Charges</td>
+                                </tr>
+                                <tr id="sl-adult-row">
+                                    <td id="slAdultTickets">SL Adult</td>
+                                    <td id="slAdultCharge"></td>
+                                </tr>
+                                <tr id="sl-child-row">
+                                    <td id="slChildTickets">SL Child</td>
+                                    <td id="slChildCharge"></td>
+                                </tr>
+                                <tr id="foreign-adult-row">
+                                    <td id="foreignerAdultTickets">Foreigner Adult</td>
+                                    <td id="foreignerAdultCharge"></td>
+                                </tr>
+                                <tr id="foreign-child-row">
+                                    <td id="foreignerChildTickets">Foreigner Child</td>
+                                    <td id="foreignerChildCharge"></td>
+                                </tr>
+                                <tr id="Infant-row" >
+                                    <td id="infantTickets">Infant</td>
+                                    <td>Free</td>
+                                </tr>
+                                <tr>
+                                    <td>Total Payable</td>
+                                    <td id="totalPayable"></td>
+                                </tr>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+
+
+
+                <script src="Tickets.js"></script>
+
+            </div>
+        <footer class="footer">
+            <div class="container-home">
+                <div class="row">
+                    <div class="footer-col">
+                        <h4>Featured Links</h4>
+                        <ul>
+                            <li><a href="#">About Us</a></li>
+                            <li><a href="#">Terms & Conditions</a></li>
+                            <li><a href="#">Privacy Policy</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-col">
+                        <h4>Get Help</h4>
+                        <ul>
+                            <li><a href="#">F.A.Q</a></li>
+                            <li><a href="#">Contact Us</a></li>
+                            <li><a href="#">Sri Lanka Map</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-col">
+                        <h4>Follow Us</h4>
+                        <div class="social-links">
+                            <a href="#"><i class="fab fa-facebook-f"></i></a></i></a>
+                            <a href="#"><i class="fab fa-twitter"></i></a></i></a>
+                            <a href="#"><i class="fab fa-instagram"></i></a></i></a>
+                            <a href="#"><i class="fab fa-linkedin-in"></i></a></i></a>
+                        </div>
+                        <!-- <div class="space"></div> -->
+                    </div>
+                </div>
+            </div>
+            <div class="bottom">
+                <p>copyright &copy;2023 TurtleTales.Designed by <span>Jayoda Makawita</span></p>
+            </div>
+        </footer>
+    </div>
+
+
+</body>
+
+</html>

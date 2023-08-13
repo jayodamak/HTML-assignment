@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="Tickets.css" />
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200">
+     
+         <title>Buy Tickets</title>
+
+</head>
+
+
+<body onload="pageOnload()">
+    <div class="bg-image-home">
+        <!-- Navigation bar -->
+        <header class="header">
+            <a href="./Home.html" class="logo">TurtleTales</a>
+            <div>
+                <nav class="navbar">
+                    <a href="./Home.html">Home</a>
+                    <a href="./Blogs.html">Blogs</a>
+                    <a href="./Categories.html">Turtle Categories</a>
+                    <div class="dropdown-menu">
+                        <a href="#turtle hatcheries" class="menu-btn">Turtle hatcheries</a>
+                        <div class="menu-content">
+                            <ul>
+                                <li><a class="links-hidden" href="./Hikkaduwa.html">Hikkaduwa</a></li>
+                                <li><a class="links-hidden" href="./Kosgoda.html">Kosgoda</a></li>
+                                <li><a class="links-hidden" href="./Bentota.html">Bentota</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <a href="./Threats.html">Threats To Turtles</a>
+
+                </nav>
+            </div>
+            <div class="btn-group">
+                <a href="Donate.html" class="btn">Donate</a>
+                <a href="#purchase" class="btn">Purchase</a>
+            </div>
+        </header>
+
+
+        <div class="tickets">
+            <div class="all">
+                <div class="heading">
+                    <div class="det-tickets">
+                        <p>Buy Tickets</p><br><br>
+                        <a href="#Dates">Dates </a> &nbsp &nbsp
+                        <p1>| </p1>&nbsp &nbsp &nbsp
+                        <a href="#Duration">Duration</a> &nbsp &nbsp
+                        <p1>| </p1>&nbsp &nbsp &nbsp
+                        <a href="#Guests">Guests </a> &nbsp &nbsp
+                    </div>
+                </div>
+
+
+
+
+
+
+                <!-- Date -->
+                <section id="Dates">
+                    <h class="duration-text">Select Your Visit Date</h><br><br><br><br>
+                    <div class="dates">
+                        <div class="wrapper">
+                            <header>
+                                <p class="current-date"></p>
+                                <div class="icons">
+                                    <span id="prev" class="material-symbols-rounded">chevron_left</span>
+                                    <span id="next" class="material-symbols-rounded">chevron_right</span>
+                                </div>
+                            </header>
+                            <div class="calendar">
+                                <ul class="weeks">
+                                    <li>Sun</li>
+                                    <li>Mon</li>
+                                    <li>Tue</li>
+                                    <li>Wed</li>
+                                    <li>Thu</li>
+                                    <li>Fri</li>
+                                    <li>Sat</li>
+                                </ul>
+                                <ul class="days"></ul>
+                            </div>
+                        </div>
+                    </div>
+
+
+                </section>
+
+
+
+
+                <!-- Duration -->
+
+                <section id="Duration">
+                    <div class="duration">
+                        <h class="duration-text">Choose your visit duration</h><br><br><br><br>
+                        <p>
+                            <li>
+                                The Hikkaduwa turtle hatchery operates all seven days of the week from 07:00 AM to 6:00
+                                PM.
+                            </li>
+                        </p><br><br>
+                        <p>
+                            <li>
+                                The entire day has been divided into 1-hour based time slots, and you can select
+                                your preferred duration from the drop-down menu below:
+                            </li>
+                        </p><br><br>
+                         
+                          <div class="checkbox-select">
+                            
+                            <div class="multi-select" id="multi-select-list">
+                            <!-- list will be append with Js function -->
+                               
+                            </div>
+                        </div>
+
+
+                        <h class="du-text">Peak Hours:</h><br><br>
+                        <p>
+                            <li>
+                                Please note that every day from 10:00 AM to 1:00 PM and from 3:00 PM to 6:00 PM will be
+                                considered as Peak hours.
+                            </li>
+                        </p><br><br>
+                        <h class="du-text">Booking Information:</h><br><br>
+                        <p>
+                            <li>
+                                You can select a single one-hour time slot or choose multiple consecutive one-hour time
+                                slots from the drop-down menu.
+                            </li>
+                        </p><br><br>
+                        <p>
+                            <li>Infants (both SL and Foreigner) under 4 years of age have free entrance.</li>
+                        </p><br><br>
+                        <h class="du-text">Price:</h><br><br>
+                        <p>
+                            <li>Please refer to the table below for a summary of the charges:</li>
+                        </p><br><br>
+                        <table>
+                            <tr class="table-heading">
+                                <th>Category</th>
+                                <th>Normal Hour (USD)</th>
+                                <th>Peak Hour (USD)</th>
+                            </tr>
+                            <tr>
+                                <td>Foreigner Adult</td>
+                                <td>$10</td>
+                                <td>$13</td>
+                            </tr>
+                            <tr>
+                                <td>Foreigner Child</td>
+                                <td>$5</td>
+                                <td>$8</td>
+                            </tr>
+                            <tr>
+                                <td>SL Adult</td>
+                                <td>$4</td>
+                                <td>$6</td>
+                            </tr>
+                            <tr>
+                                <td>SL Child</td>
+                                <td>$2</td>
+                                <td>$3</td>
+                            </tr>
+                            <tr>
+                                <td>Infant</td>
+                                <td>Free</td>
+                                <td>Free</td>
+                            </tr>
+                        </table><br><br><br>
+
+                        <p>
+                            <li>
+                                We hope you have a wonderful experience at the Hikkaduwa turtle hatchery! If you have
+                                any questions or need further assistance, <br>please don't hesitate to contact us.
+                            </li>
+                        </p><br><br>
+                    </div>
+                </section>
+
+
+
+
+
+                <!-- Guests -->
+                <section id="Guests">
+                    <div class="guests">
+                        <h class="duration-text">Select Number of Tickets</h><br><br><br><br>
+                        <p>
+                            <li>
+                                Please choose the number of tickets needed for each category from the options below:
+                            </li>
+                        </p><br><br>
+
+                        <div class="ticket-form">
+                            <div class="ticket-category">
+                                <label for="SLAdult">SL Adult:</label>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+
+                                <button id="mButton1" onclick="removeSlAdults()">-</button> &nbsp&nbsp
+                                <span id="1">0</span> &nbsp&nbsp
+                                <button id="pButton2" onclick="addSlAdults()">+</button><br>
+
+                            </div>
+
+
+
+                            <div class="ticket-category">
+                                <label for=" SLChild">SL Child:</label> &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+
+                                <button id="mButton2" onclick="removeSlChild()">-</button> &nbsp&nbsp
+                                <span id="2">0</span> &nbsp&nbsp
+                                <button id="pButton2" onclick="addSlChild()">+</button><br>
+
+                            </div>
+
+
+
+                            <div class="ticket-category">
+                                <label for="FAdult">Foreigner Adult:</label>
+
+                                <button id="mButton3" onclick="removeForeigner()">-</button>&nbsp&nbsp
+                                <span id="3">0</span>&nbsp&nbsp
+                                <button id="pButton3" onclick="addForeigner()">+</button><br>
+                            </div>
+
+
+
+                            <div class="ticket-category">
+                                <label for="FChild">Foreigner Child:</label>
+
+                                <button id="mButton4" onclick="removeForeignChild()">-</button>&nbsp&nbsp
+                                <span id="4">0</span>&nbsp&nbsp
+                                <button id="pButton4" onclick="addForeignChild()">+</button><br>
+                            </div>
+
+
+
+                            <div class="ticket-category">
+                                <label
+                                    for="Infant">Infant:</label>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+
+                                <button id="mButton5" onclick="removeInfant()">-</button>&nbsp&nbsp
+                                <span id="5">0</span>&nbsp&nbsp
+                                <button id="pButton5" onclick="addInfant()">+</button><br>
+                            </div>
+                        </div>
+
+
+
+                        <p>
+                            <li>
+                                You can specify the quantity of tickets for each category by entering the desired number
+                                in the input fields provided.
+                            </li>
+                        </p><br><br>
+                        <p>
+                            <li>Once you've made your selections, click the "Confirm Selection" button to proceed.</li>
+                        </p><br><br>
+                        <p>
+                            <li>
+                                The selected ticket quantities will be saved in your browser's local storage, so you can
+                                easily continue with your booking <br>or make changes during your visit to the Hikkaduwa
+                                Turtle Hatchery.
+                            </li>
+                        </p><br><br>
+                        <p>
+                            <li>
+                                Infants (both SL and Foreigner) under 4 years of age are eligible for free entrance and
+                                do not require a ticket reservation.
+                            </li>
+                        </p><br><br>
+
+
+                </section>
+
+
+
+
+                <!-- Summary table -->
+                <div class="sticky-summary">
+                    <div class="sum-tab">
+                        <br><br>
+                        <h2>Summary Of Your Order</h2>
+                        <div id="summaryTable" class="summary-table">
+                            <table>
+                                <tr>
+                                    <td>Date</td>
+                                    <td id="date"></td>
+                                </tr>
+                                <tr>
+                                    <td>Time</td>
+                                    <td id="time"></td>
+                                </tr>
+                                <tr>
+                                    <td>Duration</td>
+                                    <td id="duration"></td>
+                                </tr>
+                                <tr>
+                                    <td>Tickets</td>
+                                    <td>Charges</td>
+                                </tr>
+                                <tr id="sl-adult-row">
+                                    <td id="slAdultTickets">SL Adult</td>
+                                    <td id="slAdultCharge"></td>
+                                </tr>
+                                <tr id="sl-child-row">
+                                    <td id="slChildTickets">SL Child</td>
+                                    <td id="slChildCharge"></td>
+                                </tr>
+                                <tr id="foreign-adult-row">
+                                    <td id="foreignerAdultTickets">Foreigner Adult</td>
+                                    <td id="foreignerAdultCharge"></td>
+                                </tr>
+                                <tr id="foreign-child-row">
+                                    <td id="foreignerChildTickets">Foreigner Child</td>
+                                    <td id="foreignerChildCharge"></td>
+                                </tr>
+                                <tr id="Infant-row" >
+                                    <td id="infantTickets">Infant</td>
+                                    <td>Free</td>
+                                </tr>
+                                <tr>
+                                    <td>Total Payable</td>
+                                    <td id="totalPayable"></td>
+                                </tr>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+
+
+
+            </div>
+
+            <div class="Continue-button">
+                <a href="Details.html" class="btn">Continue with <br>purchase</a>
+            </div>         
+
+        </div>
+        <footer class="footer">
+            <div class="container-home">
+                <div class="row">
+                    <div class="footer-col">
+                        <h4>Featured Links</h4>
+                        <ul>
+                            <li><a href="#">About Us</a></li>
+                            <li><a href="#">Terms & Conditions</a></li>
+                            <li><a href="#">Privacy Policy</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-col">
+                        <h4>Get Help</h4>
+                        <ul>
+                            <li><a href="#">F.A.Q</a></li>
+                            <li><a href="#">Contact Us</a></li>
+                            <li><a href="#">Sri Lanka Map</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-col">
+                        <h4>Follow Us</h4>
+                        <div class="social-links">
+                            <a href="#"><i class="fab fa-facebook-f"></i></a></i></a>
+                            <a href="#"><i class="fab fa-twitter"></i></a></i></a>
+                            <a href="#"><i class="fab fa-instagram"></i></a></i></a>
+                            <a href="#"><i class="fab fa-linkedin-in"></i></a></i></a>
+                        </div>
+                        <!-- <div class="space"></div> -->
+                    </div>
+                </div>
+            </div>
+            <div class="bottom">
+                <p>copyright &copy;2023 TurtleTales.Designed by <span>Jayoda Makawita</span></p>
+            </div>
+        </footer>
+    </div>
+    </div>
+    </div>
+
+</body>
+<script src="Tickets.js"></script>
+<script src="multiselect-dropdown.js"  type="application/json" ></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-p34f1UUtsS3wqzfto5wAAmdvj+osOnFyQFpp4Ua3gs/ZVWx6oOypYoCJhGGScy+8" crossorigin="anonymous"></script>
+</html>
