@@ -1600,3 +1600,31 @@ ul {
 
 
 }
+
+
+          /* Assignement 2 */
+
+/* Hikka */
+.bg-image-hikkaduwa .book-now{
+  padding-left: 70%;
+  padding-bottom: 2%;
+  padding-top:.2%;
+}
+
+.bg-image-hikkaduwa .book-now .btn{
+  padding: 1rem 3rem;
+  font-size: 20px;
+  color: white;
+  border: 0.15rem solid rgb(137, 16, 16);
+  border-radius: 10px;
+  cursor: pointer;
+  background: none;
+  font-weight: 600;
+  background: rgb(137, 16, 16);
+}
+
+.bg-image-hikkaduwa .book-now .btn:hover {
+  background: #ffffff;
+  color: rgb(0, 0, 0);
+  border: 0.15rem solid white;
+}
