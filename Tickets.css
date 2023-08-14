@@ -601,7 +601,6 @@ td {
   align-items: flex-start;
   margin-top: 2%;
   margin-bottom: 2%;
-
 }
 
 input[type="text"],
@@ -610,7 +609,7 @@ input[type="tel"],
 textarea,
 select,
 #dob {
-  width: 380%;
+  width: 310%;
   padding: 7%;
   margin-bottom: 20px;
   border: 1px solid black;
@@ -663,9 +662,6 @@ input.payment-input.invalid + .validation-message {
   /* border: 1px solid red; */
 }
 
-
-
-
 /* Payment page */
 
 .payment-wrapper {
@@ -711,7 +707,6 @@ input.payment-input.invalid + .validation-message {
   color: black;
   /* #555555; */
 }
-
 
 /* input:invalid {
   border: 3px solid red;
@@ -812,7 +807,7 @@ input.payment-input.invalid + .validation-message {
 /* Confirmation page */
 
 .confirm-page {
-  padding-left: 18%;
+  padding-left: 16%;
   padding-top: 2%;
   padding-bottom: 2%;
 }
@@ -830,7 +825,7 @@ input.payment-input.invalid + .validation-message {
 }
 
 .confirm .confirm-table {
-  padding-left: 24%;
+  padding-left: 35%;
   font-size: 210%;
   padding-top: 4%;
   padding-bottom: 4%;
@@ -855,9 +850,9 @@ input.payment-input.invalid + .validation-message {
 
 /* Summary table */
 
-/*.sum-tab {
-    background-color: #222; 
-}*/
+/* .sum-tab {
+     background-color: #222; 
+} */
 
 .sum-tab h2 {
   color: white;
@@ -885,7 +880,7 @@ td {
   top: 25%;
   right: 2%;
   width: 25%;
-  height: 72%;
+  height: 56%;
   border: 3px solid #ccc;
   overflow: hidden;
   /* z-index: 999; */
@@ -1122,10 +1117,9 @@ ul {
     font-size: 250%;
     width: 250px;
   }
-  .Continue-button{
+  .Continue-button {
     margin-top: 10%;
   }
-
 
   /* Details page */
   #bokingForm {
@@ -1148,28 +1142,26 @@ ul {
     padding-right: 2%;
   }
 
-  input[type="tel"]{
+  input[type="tel"] {
     width: 445%;
   }
-  #bokingForm{
+  #bokingForm {
     margin-bottom: 10%;
   }
 
-
   /* .payment-page */
-  .payment-wrapper{
+  .payment-wrapper {
     width: 120%;
     padding-left: 10%;
   }
-  
-  .payment{
+
+  .payment {
     max-width: 380%;
     height: 10%;
   }
-  .payment input{
+  .payment input {
     width: 105%;
   }
-
 
   /* Confirmation page */
   .confirm-page {
@@ -1183,12 +1175,16 @@ ul {
     padding-right: 10%;
   }
 
- 
-
   /* summary table */
-  .sticky-summary{
+  .sticky-summary {
     position: relative;
     width: 80%;
-    float:right;
+    /* float:right; */
+    top: 10%;
+    left: 10%;
+    margin-bottom: 5%;
   }
-} 
+  .summary-table {
+    margin-bottom: 5%;
+  }
+}
